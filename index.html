@@ -16,32 +16,37 @@
         }
         .header {
             width: 100%;
-            height: 150px; /* Height for flag visibility */
+            height: 150px; /* Increased height for flag visibility */
             background-image: url('https://github.com/fredy3cifras/pizzarras/raw/main/images/Uruguayf.jpeg'); /* Uruguay Flag */
-            background-size: cover; /* Ensure the entire flag is visible */
-            background-repeat: no-repeat;
+            background-size: contain; /* Ensure the entire flag is visible */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
             background-position: center;
         }
         iframe {
             width: 100%;
-            height: 100vh; /* Make the iframe fill the entire height of the viewport */
-            border: none; /* Remove border */
+            height: calc(100vh - 150px); /* Adjust height based on viewport height minus the header */
+            border: none; /* Remove border for a cleaner look */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            background-color: transparent; /* Remove any background color */
-            overflow: hidden; /* Hide overflow so the PDF fits perfectly */
         }
         .container {
             width: 100%;
             max-width: 1200px;
             padding: 20px;
         }
+
+        /* Ensure proper scrolling and visibility on mobile devices */
+        @media (max-width: 768px) {
+            iframe {
+                height: calc(100vh - 150px); /* Adjust height dynamically for mobile */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="header"></div> <!-- Uruguay Flag Section -->
     <div class="container">
-        <!-- Embed the PDF using Google Docs Viewer with lazy load -->
+        <!-- Embed the PDF using Google Docs Viewer -->
         <iframe src="https://docs.google.com/gview?url=https://github.com/fredy3cifras/pizzarras/raw/main/Untitlepd%20(1).pdf&embedded=true" allowfullscreen></iframe>
     </div>
 </body>
