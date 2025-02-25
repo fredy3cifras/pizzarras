@@ -24,12 +24,10 @@
         }
         iframe {
             width: 100%;
-            min-height: 80vh; /* Minimum height based on screen size (viewport height) */
+            max-height: 90vh; /* Allow the iframe to take up most of the screen, but limit it for better control */
             border: 1px solid #ced4da;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            background-color: black; /* Black background for the sides of the PDF */
-            loading: lazy; /* Lazy load the PDF */
             overflow: auto; /* Allow scrolling within the iframe */
         }
         .container {
