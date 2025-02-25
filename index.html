@@ -16,7 +16,7 @@
         }
         .header {
             width: 100%;
-            height: 150px; /* Increased height for flag visibility */
+            height: 150px; /* Height for flag visibility */
             background-image: url('https://github.com/fredy3cifras/pizzarras/raw/main/images/Uruguayf.jpeg'); /* Uruguay Flag */
             background-size: contain; /* Ensure the entire flag is visible */
             background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -24,11 +24,12 @@
         }
         iframe {
             width: 100%;
-            height: 1200px;
+            height: 80vh; /* Adjust the height based on screen size (viewport height) */
             border: 1px solid #ced4da;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             background-color: black; /* Black background for the sides of the PDF */
+            loading: lazy; /* Lazy load the PDF */
         }
         .container {
             width: 100%;
@@ -40,7 +41,7 @@
 <body>
     <div class="header"></div> <!-- Uruguay Flag Section -->
     <div class="container">
-        <!-- Embed the PDF using Google Docs Viewer -->
+        <!-- Embed the PDF using Google Docs Viewer with lazy load -->
         <iframe src="https://docs.google.com/gview?url=https://github.com/fredy3cifras/pizzarras/raw/main/Untitlepd%20(1).pdf&embedded=true" allowfullscreen></iframe>
     </div>
 </body>
